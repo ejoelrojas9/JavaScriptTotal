@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Films</title>
+  <link rel="stylesheet" href="misEstilos.css">
+  <script src="misScripts.js"></script>
+</head>
+<body>
+  <div id="divFilm">
+    <img src="image/cine.avif" alt="Image File" width="20%">
+    <h1>Films</h1>
+    <label for="ageFile">Indica tu edad y te recomendamos una pelicula:</label><input type="text" id="ageFile"><br><br>
+    <button onclick="selectGen('comedia')" id="comediaGen">Comedia</button>
+    <button onclick="selectGen('drama')" id="dramaGen">Drama</button>
+    <button onclick="selectGen('infantil')" id="infantilGen">Infantil</button>
+    <button onclick="selectGen('terror')" id="terrorGen">Terror</button><br>
+    <h2>Nuestra recomendación:</h2>
+    <h3 id="film"></h3>
+    <center><img src="image/film.webp" id="pictureClass" alt="Image File" width="30%"><br></center>
+  </div>
+</body>
+</html>

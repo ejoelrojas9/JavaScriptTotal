@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Break & Continue</title>
+</head>
+<body>
+  <script>
+    let array1 = [1, 5, 24, 95, 11, 10, 62, 15, 9];
+
+    for (let numero of array1) {
+      if (numero < 50) {
+        document.write(numero + "<br>");
+      }
+    }
+
+    document.write("Esto es todo");
+    document.write("<h1>Con break</h1>");
+    for (let numero of array1) {
+        if (numero < 50) {
+          document.write(numero + "<br>");
+        } else {
+          break;
+        }
+      }
+
+      document.write("Esto es todo con Break");
+
+      document.write("<h1>Con continue</h1>");
+        for (let numero of array1) {
+          if (numero < 50) {
+            document.write(numero + "<br>");
+          } else {
+            continue;
+          }
+        }
+
+        document.write("Esto es todo con Continue");
+  </script>
+</body>
+</html>

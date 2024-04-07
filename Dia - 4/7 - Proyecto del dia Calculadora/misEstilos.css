@@ -1,0 +1,60 @@
+body{
+  background-color: aqua;
+}
+
+h1{
+  text-align: center;
+}
+
+div{
+  padding: 2rem;
+  border-radius: 0.5rem;
+  background-color: beige;
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+}
+
+button{
+  font-size: 20px;
+  padding: 5%;
+  background-color: blueviolet;
+  color: white;
+  border-radius: 0.5rem;
+}
+
+#number1{
+  padding: 0.5rem;
+  width: 42%;
+}
+
+#number2 {
+  padding: 0.5rem;
+  width: 42%;
+  margin-left: 0.1rem;
+}
+
+#totalOpe{
+  padding: 0.5rem;
+  width: 92%;
+  margin-top: 1rem;
+}
+
+input{
+  border-radius: 0.5rem;
+  background-color: white;
+  border-style: solid;
+  color: black;
+}
+
+#resta, #suma, #multiplicacion, #division{
+  width: 23%;
+}
+
+#potencia, #raiz, #absoluto, #random {
+  width: 49%;
+}
+
+#round, #floor, #ceil{
+  width: 32%;
+}

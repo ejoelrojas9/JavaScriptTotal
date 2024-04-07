@@ -1,0 +1,29 @@
+body {
+  background-color: rgb(155, 186, 176);
+}
+
+h1 {
+  margin-left: 2rem;
+  color: blue;
+}
+
+h2 {
+  margin-left: 2rem;
+  color: blue;
+}
+
+ul {
+  margin-left: 2rem;
+  font-size: 1rem;
+  color: blue;
+  list-style-type: none;
+}
+
+button {
+  margin-left: 2rem;
+  background-color: rgb(35, 145, 35);
+  color: aliceblue;
+  padding: 0.5rem;
+  width: 20%;
+  border-radius: 0.2rem;
+}

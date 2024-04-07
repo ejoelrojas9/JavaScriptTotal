@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fecha y Hora</title>
+  <link rel="stylesheet" href="misEstilos.css   ">
+</head>
+
+<!-- onload llama la función cada vez que se carga la página -->
+<body onload="initReloj()">
+  <input type="number" id="timeSet">
+  <button onclick="initTime()">Alarma</button>
+  <h1 id="alertText">00:00:00</h1>
+
+  <audio id="audioAlarm">
+    <source  src="Audios/alarma.mp3" type="audio/mpeg">
+    Sonido no habilitado
+  </audio>
+
+  <script>
+    let segSelect = document.getElementById("timeSet");
+    let labelMessage = document.getElementById("alertText");
+    let audioEvent = document.getElementById("audioAlarm"); 
+
+    function initTime() {
+      // setTimeout diapara una función trascurrido un determinado tiempo
+      setTimeout(endTime, 1000 * segSelect.value);
+    }
+
+    function endTime() {
+      labelMessage.style.color = "green";
+      audioEvent.play();
+    }
+
+    // Funnción que comienza el reloj
+    function initReloj() {
+      // llama una función cada vez que se cumple un determinado tiempo
+      setInterval(ticTac, 1000);
+    }
+
+    function ticTac() {
+      // Fecha y hora actual del ordenador
+      let currentTime = new Date();
+      // let hour = currentTime.getHours();
+      // let minute = currentTime.getMinutes();
+      // let seg = currentTime.getSeconds();
+
+      // Configuración para anteponer un cero en los tiempos menores a 10
+      let hour = String(currentTime.getHours()).padStart(2, "0");
+      let minute = String(currentTime.getMinutes()).padStart(2, "0");
+      let seg = String(currentTime.getSeconds()).padStart(2, "0");
+
+      let textHour = hour + ":" + minute + ":" + seg;
+      labelMessage.textContent = textHour;
+    }
+  </script>
+</body>
+
+</html>

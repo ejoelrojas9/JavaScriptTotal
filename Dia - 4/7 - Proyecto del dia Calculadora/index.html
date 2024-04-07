@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora</title>
+  <link rel="stylesheet" href="misEstilos.css">
+  <script src="misScripts.js"></script>
+</head>
+<body>
+
+  <h1>Calculadora</h1><br>
+  <div>
+    <input type="text" id="number1"><input type="text" id="number2"><br><br>
+    <button onclick="resOperacion()" id="resta">-</button>
+    <button onclick="sumOperacion()" id="suma">+</button>
+    <button onclick="mulOperacion()" id="multiplicacion">*</button>
+    <button onclick="divOperacion()" id="division">/</button><br><br>
+    <button onclick="potOperacion()" id="potencia">Potencia</button>
+    <button onclick="raOperacion()" id="raiz">Raíz</button><br><br>
+    <button onclick="absOperacion()" id="absoluto">Absoluto</button>
+    <button onclick="randOperacion()" id="random">Random</button><br><br>
+    <input type="text" id="totalOpe"><br><br>
+    <button onclick="rouOperacion()" id="round">Round</button>
+    <button onclick="floOperacion()" id="floor">Floor</button>
+    <button onclick="ceiOperacion()" id="ceil">Ceil</button>
+  </div>
+</body>
+</html>

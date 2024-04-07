@@ -1,0 +1,17 @@
+/* Combinador decendiente */
+div p{
+  color: green;
+}
+
+/* Hijos directos */
+ol > li {
+  font-weight: bold;
+}
+
+h2 + h3{
+  background-color: lightskyblue;
+}
+/* :Hover que se aplica cuando el mouse pasa por el selector */
+div p[align="left"]:hover{
+  background-color: gold;
+}
