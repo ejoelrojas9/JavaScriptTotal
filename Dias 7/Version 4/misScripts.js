@@ -47,8 +47,7 @@ function crearParrafoTienda(textoLabel, inputId, valorMin) {
 }
 
 function extraerNumElement(elemento) {
-  let miElemento = document.getElementById(elemento);
-  let miTexto = miElemento.value;
+  let miTexto = elemento.value;
   let miNumero = Number(miTexto);
 
   return miNumero
@@ -56,15 +55,23 @@ function extraerNumElement(elemento) {
 
 function calcular() {
   let ventas = [];
+  let posicionVentas = 0;
+  let elementosVentas = document.getElementById('itemsTiendas');
+  
+  for(let item of elementosVentas.children){
+    let valorVenta = extraerNumElement(item.children[1]);
+    ventas[posicionVentas] = valorVenta;
+    posicionVentas += 1;
+  }
 
-  ventas[0] = extraerNumElement("ventasTienda1");
-  ventas[1] = extraerNumElement("ventasTienda2");
-  ventas[2] = extraerNumElement("ventasTienda3");
-  ventas[3] = extraerNumElement("ventasTienda4");
-  ventas[4] = extraerNumElement("ventasTienda5");
-  ventas[5] = extraerNumElement("ventasTienda6");
-  ventas[6] = extraerNumElement("ventasTienda7");
-  ventas[7] = extraerNumElement("ventasTienda8");
+  // ventas[0] = extraerNumElement("ventasTienda1");
+  // ventas[1] = extraerNumElement("ventasTienda2");
+  // ventas[2] = extraerNumElement("ventasTienda3");
+  // ventas[3] = extraerNumElement("ventasTienda4");
+  // ventas[4] = extraerNumElement("ventasTienda5");
+  // ventas[5] = extraerNumElement("ventasTienda6");
+  // ventas[6] = extraerNumElement("ventasTienda7");
+  // ventas[7] = extraerNumElement("ventasTienda8");
 
   let totalVentas = sumarTotal(ventas);
   let ventaMayor = calcularMayor(ventas);
