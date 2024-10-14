@@ -71,10 +71,12 @@ function calcular() {
 
   for(let item of elementosVentas.children){
     item.children[1].setAttribute('class', 'colorNul');
-    if (ventaMayor == item.children[1].value) {
+    let valorVenta = extraerNumElement(item.children[1]);
+
+    if (ventaMayor == valorVenta) {
       item.children[1].setAttribute('class', 'colorMayor');
     }
-    if (ventaMenor == item.children[1].value) {
+    if (ventaMenor == valorVenta) {
       item.children[1].setAttribute('class', 'colorMenor');
     }
   }
