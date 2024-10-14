@@ -57,6 +57,10 @@ function calcular() {
   let ventas = [];
   let posicionVentas = 0;
   let elementosVentas = document.getElementById('itemsTiendas');
+  let valorMayor = Number(document.getElementById('ventasTienda1').value);;
+  let valorMenor = Number(document.getElementById('ventasTienda1').value);
+  let itemMenor = document.getElementById('ventasTienda1').setAttribute('class', 'colorNul')
+  let itemMayor = document.getElementById('ventasTienda1').setAttribute('class', 'colorNul')
   
   for(let item of elementosVentas.children){
     let valorVenta = extraerNumElement(item.children[1]);
@@ -64,23 +68,26 @@ function calcular() {
     posicionVentas += 1;
   }
 
-  // ventas[0] = extraerNumElement("ventasTienda1");
-  // ventas[1] = extraerNumElement("ventasTienda2");
-  // ventas[2] = extraerNumElement("ventasTienda3");
-  // ventas[3] = extraerNumElement("ventasTienda4");
-  // ventas[4] = extraerNumElement("ventasTienda5");
-  // ventas[5] = extraerNumElement("ventasTienda6");
-  // ventas[6] = extraerNumElement("ventasTienda7");
-  // ventas[7] = extraerNumElement("ventasTienda8");
+  for(let item of elementosVentas.children){
+    let valorVenta = extraerNumElement(item.children[1]);
+
+    if (valorVenta > valorMayor) {
+      valorMayor = valorVenta
+      itemMayor = item.children[1]
+    }
+    else if (valorVenta <= valorMenor && valorVenta <= valorMayor) {
+
+      valorMenor = valorVenta
+      itemMenor = item.children[1]
+    }
+  }
+
+  itemMayor.setAttribute('class', 'colorMayor');
+  itemMenor.setAttribute('class', 'colorMenor');
 
   let totalVentas = sumarTotal(ventas);
-  let ventaMayor = calcularMayor(ventas);
-  let ventaMenor = calcularMenor(ventas); 
 
-
-  let menSalida = "Total Ventas: " + totalVentas +
-                  " / Venta Mayor: " + ventaMayor +
-                  " / Venta Menor; " + ventaMenor;
+  let menSalida = "Total Ventas: " + totalVentas
 
   let elementoSalida = document.getElementById('parrafoSalida')
 

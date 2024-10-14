@@ -1,0 +1,15 @@
+body {
+  background-color: aqua;
+}
+
+.colorMayor {
+  background-color: red;
+}
+
+.colorMenor {
+  background-color: chartreuse;
+}
+
+.colorNul {
+  background-color: white;
+}
