@@ -9,23 +9,24 @@ function crearTiendas(contenedorID, min, cantidadTiendas) {
     let idInput = "ventasTienda" + conteoTiendas
 
     // Crear tiendas con crearParrafoTienda (función)
-    let parrafoTienda = crearParrafoTienda(idInput, min);
+    let parrafoTienda = crearParrafoTienda(textoEtiqueta, idInput, min);
 
     // Agregar el parrafo al contenedor
     elementoContenedor.appendChild(parrafoTienda);
   }
 }
 
-function crearParrafoTienda(textoLabel, valorMin) {
+function crearParrafoTienda(textoLabel, inputId, valorMin) {
   // Crear etiqueta <p>
   let elementoParrafo = document.createElement('p');
 
   // Crear etiqueta <label>
   let elementoEtiqueta = document.createElement('label');
+  elementoEtiqueta.innerText = textoLabel + ": ";
+  // elementoEtiqueta.innerText = textoLabel + ":" + "\n";
 
   // Conectar con el <input>
-  elementoEtiqueta.setAttribute('for', textoLabel);
-  elementoEtiqueta.innerText = textoLabel + "\n";
+  elementoEtiqueta.setAttribute('for', inputId);
   // elementoEtiqueta.textContent = textoLabel;
 
   // Creat <input>
@@ -33,7 +34,7 @@ function crearParrafoTienda(textoLabel, valorMin) {
 
   // Establecer atributos de input
   elementoInput.setAttribute('type', 'number');
-  elementoInput.setAttribute('id', textoLabel);
+  elementoInput.setAttribute('id', inputId);
   elementoInput.setAttribute('min', valorMin);
   elementoInput.setAttribute('value', 0);
 
@@ -62,6 +63,8 @@ function calcular() {
   ventas[3] = extraerNumElement("ventasTienda4");
   ventas[4] = extraerNumElement("ventasTienda5");
   ventas[5] = extraerNumElement("ventasTienda6");
+  ventas[6] = extraerNumElement("ventasTienda7");
+  ventas[7] = extraerNumElement("ventasTienda8");
 
   let totalVentas = sumarTotal(ventas);
   let ventaMayor = calcularMayor(ventas);
