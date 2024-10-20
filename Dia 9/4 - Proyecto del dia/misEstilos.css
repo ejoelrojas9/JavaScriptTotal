@@ -1,0 +1,27 @@
+body {
+  background-color: aqua;
+}
+
+h1 {
+  color: black;
+  margin-left: 20%;
+  text-transform: uppercase;
+  text-shadow: 2px 2px #ff0000;
+  font-size: 3em;
+}
+
+button {
+  text-decoration: solid;
+  color: white;
+  background-color: black;
+  padding: 15px 32px;
+  margin-left: 20%;
+  margin-top: 0.5rem;
+  border-radius: 5px;
+  border: none;
+}
+
+li {
+  padding: 1rem;
+  margin-left: 20%;
+}
