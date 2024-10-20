@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clases</title>
+</head>
+<body>
+  <script>
+    // Declaracion de Clase
+    class Papel {
+      constructor(alto, ancho){
+        this.alto = alto;
+        this.ancho = ancho;
+      }
+    };
+
+    // Expresion de Clase
+    // Anonima
+    let PapelA = class {
+      constructor(alto, ancho){
+        this.alto = alto;
+        this.ancho = ancho;
+      }
+    };
+
+    // Nombrada
+    let PapelB = class PapelX { // El nombre de esta clase es PapelX en la consola se ve PapelB.name => PapelX
+      constructor(alto, ancho){
+        this.alto = alto;
+        this.ancho = ancho;
+      }
+    };
+  </script>
+</body>
+</html>
