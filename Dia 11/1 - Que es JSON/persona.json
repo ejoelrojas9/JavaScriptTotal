@@ -1,0 +1,13 @@
+{
+  "nombre": "Joel Rojas",
+  "edad" : 45,
+  "Estudiante": false,
+  "direccion": {
+    "calle": "Avenida 56",
+    "ciudad": "San Antonio de Pereira"
+  },
+  "telefonos": [
+    "555-555-5555",
+    "555-555-5556"
+  ]
+}
