@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fetch</title>
+  <title>Catch</title>
 </head>
 <body>
   <div id="nombre"></div>
@@ -18,12 +18,7 @@
       let elementTexto = document.getElementById('nombre');
       elementTexto.textContent = `Nombre: ${datosJason.nombre}, Edad: ${datosJason.edad}`;
     })
+    .catch(function(error) { alert(error) })
   </script>
 </body>
 </html>
-
-<!-- 200 - Respuesta completada
-201 - Elemento creado
-204 - Respuesta vacia
-400 - Mal solicitado
-401 - No autorizado -->
