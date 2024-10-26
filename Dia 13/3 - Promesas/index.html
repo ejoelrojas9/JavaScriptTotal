@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Promesas</title>
+</head>
+<body>
+  <script>
+    // // Ejemplo 1 de promesa
+    // let miPromesa = new Promise(function(resolve, reject) {
+    //   setTimeout(function() {
+    //     let error = false;
+    //     // let error = true;
+    //     if (error){
+    //       reject('La promesa ha fallado');
+    //     } else {
+    //       resolve('La promesa se ha cumplido');
+    //     }
+    //   })
+    // })
+
+    // miPromesa
+    // .then(function(resultado) {
+    //   console.log(resultado);
+    // })
+    // .catch(function(error) {
+    //   console.log(error);
+    // });
+
+    // // Ejemplo 2 de promesa
+    // let promesa1 = new Promise(function(resolve, reject) {
+    //   setTimeout(resolve, 2000, 'Hola');
+    // });
+
+    // let promesa2 = new Promise(function(resolve, reject) {
+    //   setTimeout(resolve, 4000, 'Mundo');
+    // });
+
+    // // Toma como parametro un array de promesas y espera hasta que las promesas se completen antes de continuar
+    // Promise.all([promesa1, promesa2])
+    // .then(function(valores) {
+    //   console.log(valores);
+    // });
+    // console.log('El codigo sigue su camino');
+
+    // Ejemplo 2 de promesa
+    function obtenerUsuarios() {
+      return new Promise(function(resolve, reject) {
+        let xhr = new XMLHttpRequest();
+        xhr.open('GET', 'https://jsonplaceholder.typicode.com/users');
+        xhr.onload = function() {
+          if (xhr.status === 200) {
+            resolve(JSON.parse(xhr.responseText));
+          } else {
+            reject(xhr.statusText);
+          }
+        }
+        xhr.send();
+      });
+    }
+
+    obtenerUsuarios()
+    .then(function(usuarios) {
+      console.log(usuarios);
+    })
+    .catch(function(error) {
+      console.log(error);
+    })
+  </script>
+</body>
+</html>
