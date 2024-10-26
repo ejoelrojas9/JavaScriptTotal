@@ -1,0 +1,7 @@
+audio {
+  margin-top: 2em;
+}
+
+audio, select {
+  margin-left: 20px;
+}
