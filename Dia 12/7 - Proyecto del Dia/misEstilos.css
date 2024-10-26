@@ -1,0 +1,32 @@
+body {
+  background-color:antiquewhite;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+}
+
+h1 {
+  margin-top: 1,5em;
+}
+
+input {
+  padding: 0.5em;
+  border-radius: 0,5em;
+}
+
+button {
+  color: white;
+  background-color:rgb(61, 134, 65);
+  padding: 0.5em;
+  border-radius: 0.5em;
+}
+
+li {
+  font-weight: bold;
+}
+
+p {
+  font-weight: lighter!important;
+}
