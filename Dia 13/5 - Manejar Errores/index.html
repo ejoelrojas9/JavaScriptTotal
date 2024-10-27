@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manejar Errores</title>
+</head>
+<body>
+  <script>
+    // // CALLBACKS
+    // function sumarNumeros(a, b, callback) {
+    //   setTimeout(() => {
+    //     if(typeof a != 'number' || typeof b != 'number') {
+    //       return callback(new Error('Algún argumento no es numero'));
+    //     }
+    //     // En este caso el callback hace la verificacion de los valores ingresados
+    //     callback(null, a+b);
+    //   }, 1000);
+    // }
+
+    // sumarNumeros(1, 2, (error, resultado) => {
+    //   if (error) {
+    //     console.error(error); 
+    //   } else {
+    //     console.log('El resultado con callbak es: ' + resultado);
+    //   }
+    // }) ;
+
+    // PROMESAS
+    function sumarNumeros(a, b) {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          if (typeof a != 'number' || typeof b != 'number') {
+            reject(new Error('Ambos argumentos deben ser numeros'));
+          } else {
+            resolve(a + b);
+          }
+        }, 1000);
+      })
+    }
+
+    sumarNumeros(1, 2)
+    .then((resultado) => {
+      console.log(resultado);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+
+    // // ASYNC-AWAIT
+    // async function sumarNumeros(a, b) {
+    //   if (typeof a != 'number' || typeof b != 'number') {
+    //     // throw indica arrojar, es decir que va arrojar un error y alguien lo tiene que atrapar
+    //     throw new Error('Alguno de los argumentos no es numero');
+    //   }
+    //   return a + b 
+    // }
+
+    // async function manejarErrores() {
+    //   try{
+    //     let resultado = await sumarNumeros(2, 3);
+    //     console.log(resultado);
+    //   } catch (error) {
+    //     console.error(error);
+    //   }
+    // }
+
+    // manejarErrores(1, 2);
+  </script>
+</body>
+</html>
