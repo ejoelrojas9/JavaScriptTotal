@@ -1,0 +1,41 @@
+body {
+  text-align: center!important;
+  width: 50%;
+  margin: 0 auto;
+}
+
+h1 {
+  font-style: italic;
+  color: blueviolet;
+}
+
+h2 {
+  margin-top: 0.1em;
+  font-size: 5em;
+  font-weight: 1em;
+}
+
+.cotizaciones {
+  color: black;
+  background-color: rgb(232, 179, 189);
+}
+
+div#cotizaciones {
+  color: black;
+  background-color: rgb(232, 179, 189);
+  padding: 0.5em;
+  border-radius: 1em;
+  margin-top: 1em;
+  visibility: hidden;
+}
+
+img {
+  height: 6em;
+}
+
+#loading {
+  visibility: hidden;
+}
+#divBitcoin, #divEuro, #divBolivar, #divPesoArg {
+  margin-top: 1em;
+}
