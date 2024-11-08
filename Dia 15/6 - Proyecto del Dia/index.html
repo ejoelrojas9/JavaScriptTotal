@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="misScripts.js"></script>
+    <link rel="stylesheet" href="misEstilos.css">
+    <title>Proyecto del Día 15</title>
+  </head>
+  <body onload="loadTable()">
+
+    <h1>Lista de Estudiantes</h1>
+    <div id="consulDiv">
+      <button id="success" onclick="formRegistro()">Crear Registro</button>
+      <button id="search" onclick="consultarRegistro()">Consultar Registro</button>
+      <button id="cancel" onclick="borrarRegistro()">Eliminar Registros</button>
+    </div>
+    
+    <div id="buscarDiv">
+      <input type="text" id="inputId" placeholder="Ingrese ID"><br><br>
+      <button id="cancel" onclick="cargarPagina()">Cancelar</button>
+      <button id="success" onclick="buscarRegistro()">Buscar Registro</button><br><br>
+    </div>
+
+    <div id="borrarDiv">
+      <input type="text" id="deleteId" placeholder="Ingrese ID"><br><br>
+      <button id="cancel" onclick="cargarPagina()">Cancelar</button>
+      <button id="success" onclick="eliminarRegistro()">Borrar Registro</button><br><br>
+    </div>
+
+    <div id="showPhone">
+    </div>
+
+    <table>
+      <thead>
+        <th>ID</th>
+        <th>Marca</th>
+        <th>Modelo</th>
+        <th>Color</th>
+        <th>Almacenamiento</th>
+        <th>Procesador</th>
+      </thead>
+      <tbody id="miTabla">
+        <tr>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
