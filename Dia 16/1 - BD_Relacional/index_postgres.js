@@ -1,6 +1,6 @@
 // npm init -y // Inicializar el proyecto
 // npm install express // Instalar express
-// npm install mysql // Instalar mysql
+// npm install postgres // Instalar postgres
 // node index.js // Ejecutar el servidor
 
 // Configurar con ExpressJS el servidor de la app
