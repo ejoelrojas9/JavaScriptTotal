@@ -19,7 +19,6 @@ app.use(express.json());
 app.post("/login", (request, response) => {
     let email = request.body.email;
     let pass = request.body.pass;
-    console.log(email, pass);
     myPostgres.connection.query(
         'SELECT id FROM users WHERE email = $1 AND password = $2 ', [email, pass],
         (error, results) => {
@@ -33,13 +32,10 @@ app.post("/login", (request, response) => {
 })
 
 app.post("/validate", security.validateToken, (request, response) => {
-    console.log(request.userData.user_id);
-    console.log(request.body.permiso);
     myPostgres.connection.query(
         'SELECT p.page FROM permisos p JOIN permisosxusuario u ON u.permiso_id = p.id WHERE u.usuario_id = $1 AND p.name = $2',
         [request.userData.user_id, request.body.permiso],
         (error, results) => {
-            console.log(results.rows);
         if(error) throw error;
         if (results.rows.length === 0) {
             response.send('undefined');
